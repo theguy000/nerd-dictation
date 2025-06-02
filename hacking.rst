@@ -45,3 +45,36 @@ Technical Details
 - It is important for the recording to start as soon as possible so the recording does not start
   after the user has begun speaking.
   Some operations including importing ``vosk`` are delayed for this reason.
+
+
+Building the .deb Package
+=========================
+
+Prerequisites
+-------------
+
+Install the necessary build tools:
+
+.. code-block:: bash
+
+  sudo apt-get install build-essential debhelper devscripts dh-virtualenv python3-all python3-setuptools python3-stdeb equivs
+
+Build Command
+-------------
+
+To build the Debian package, run the following command from the root of the repository:
+
+.. code-block:: bash
+
+  dpkg-buildpackage -us -uc -b
+
+Alternatively, you can use the provided Makefile:
+
+.. code-block:: bash
+
+  make deb
+
+Output
+------
+
+The built ``.deb`` package will typically be found in the parent directory (``../``).

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Nerd Dictation
+Comment=Offline Speech to Text for Desktop
+Exec=nerd-dictation
+Icon=utilities-terminal
+Type=Application
+Categories=Utility;TextEditor;Accessibility;
+Keywords=speech;text;dictation;vosk;offline;
+StartupNotify=false

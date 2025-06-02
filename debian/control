@@ -1,0 +1,15 @@
+Source: nerd-dictation
+Section: utils
+Priority: optional
+Maintainer: Campbell Barton <ideasman42@gmail.com>
+Build-Depends: debhelper-compat (= 13), dh-python, python3-all, python3-setuptools, dh-virtualenv
+Standards-Version: 4.6.2
+Homepage: https://github.com/ideasman42/nerd-dictation
+
+Package: nerd-dictation
+Architecture: all
+Depends: ${python3:Depends}, ${misc:Depends}, python3-vosk, python3-gi, gir1.2-gtk-3.0
+Description: Offline Speech to Text for Desktop
+ nerd-dictation is a simple command-line tool that uses the Vosk
+ speech recognition toolkit to perform offline speech-to-text.
+ It's designed to be lightweight and work well with limited resources.

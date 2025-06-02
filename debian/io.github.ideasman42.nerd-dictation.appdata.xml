@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.ideasman42.nerd-dictation</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>GPL-3.0-or-later</project_license>
+  <name>Nerd Dictation</name>
+  <summary>Offline Speech to Text for Desktop</summary>
+  <description>
+    <p>
+      Nerd Dictation is a lightweight, offline speech-to-text application
+      that uses the Vosk toolkit. It allows you to dictate text without
+      an internet connection, focusing on simplicity and efficiency.
+    </p>
+    <p>Features:</p>
+    <ul>
+      <li>Offline operation</li>
+      <li>Simple command-line interface</li>
+      <li>Cross-platform (Linux)</li>
+      <li>Powered by Vosk</li>
+    </ul>
+  </description>
+  <launchable type="desktop-id">io.github.ideasman42.nerd-dictation.desktop</launchable>
+  <screenshots>
+    <!-- Add screenshots if available, or remove this section -->
+  </screenshots>
+  <url type="homepage">https://github.com/ideasman42/nerd-dictation</url>
+  <provides>
+    <binary>nerd-dictation</binary>
+  </provides>
+  <releases>
+    <release version="0.0.0" date="2025-06-02"/> <!-- Replace with actual release date -->
+  </releases>
+  <content_rating type="oars-1.1" />
+  <developer_name>Campbell Barton</developer_name>
+</component>

@@ -134,8 +134,18 @@ To test dictation:
    They are available `here <https://alphacephei.com/vosk/models>`__.
 
 
+=======
 If you prefer to use a package, see: `Packaging <package/readme.rst>`_.
 
+Packaging
+=========
+
+Official packages are not yet available, but packaging efforts are underway:
+
+- `AUR Package (Arch Linux) <https://aur.archlinux.org/packages/nerd-dictation-git>`_
+- `Debian Package (.deb) <hacking.rst#building-the-deb-package>`_ (Build from source)
+
+If you are interested in maintaining a package for another distribution, please open an issue.
 
 Configuration
 =============

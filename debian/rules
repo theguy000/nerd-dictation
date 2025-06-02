@@ -1,0 +1,23 @@
+#!/usr/bin/make -f
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+%:
+	dh $@ --with python-virtualenv
+
+override_dh_virtualenv:
+	dh_virtualenv --python /usr/bin/python3 --setuptools --extra-pip-arg="--no-cache-dir --no-binary=:all:" ../package/python
+
+override_dh_install:
+	dh_install
+	# Install desktop file
+	install -Dm644 debian/io.github.ideasman42.nerd-dictation.desktop -p $(CURDIR)/debian/nerd-dictation/usr/share/applications/io.github.ideasman42.nerd-dictation.desktop
+	# Install appstream metadata
+	install -Dm644 debian/io.github.ideasman42.nerd-dictation.appdata.xml -p $(CURDIR)/debian/nerd-dictation/usr/share/metainfo/io.github.ideasman42.nerd-dictation.appdata.xml
+	# Placeholder for icon installation
+	# install -Dm644 debian/nerd-dictation.svg $(CURDIR)/debian/nerd-dictation/usr/share/icons/hicolor/scalable/apps/io.github.ideasman42.nerd-dictation.svg
+
+override_dh_installlinks:
+	dh_installlinks
+	# Symlink the main script from the virtualenv to /usr/bin
+	# The actual path inside the venv is /opt/venvs/nerd-dictation/bin/nerd-dictation
+	ln -sf /opt/venvs/nerd-dictation/bin/nerd-dictation $(CURDIR)/debian/nerd-dictation/usr/bin/nerd-dictation
