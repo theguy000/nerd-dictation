@@ -5,7 +5,7 @@
 	dh $@ --with python-virtualenv
 
 override_dh_virtualenv:
-	dh_virtualenv --python /usr/bin/python3 --setuptools --extra-pip-arg="--no-cache-dir --no-binary=:all:" ../package/python
+	dh_virtualenv --python /usr/bin/python3 --setuptools --extra-pip-arg="--no-cache-dir --no-binary=:all:" debian/nerd-dictation/opt/venvs/nerd-dictation
 
 override_dh_install:
 	dh_install
